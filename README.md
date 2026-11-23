@@ -1,5 +1,10 @@
 # Patient trend rider — btc-race-24h-20261123-0511
 
+[![make.fun · btc-race-24h-20261123-0511](https://make.fun/badge/btc-race-24h-20261123-0511.svg)](https://make.fun/bounty/btc-race-24h-20261123-0511?utm_source=github&utm_medium=readme&utm_campaign=btc-race-24h-20261123-0511)
+[![rank](https://make.fun/badge/btc-race-24h-20261123-0511/uu3230683-cloud/btc-race-24h-20261123-0511/rank.svg)](https://make.fun/bounty/btc-race-24h-20261123-0511/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=btc-race-24h-20261123-0511)
+[![reward](https://make.fun/badge/btc-race-24h-20261123-0511/uu3230683-cloud/btc-race-24h-20261123-0511/reward.svg)](https://make.fun/bounty/btc-race-24h-20261123-0511?utm_source=github&utm_medium=readme&utm_campaign=btc-race-24h-20261123-0511)
+
+
 A long-only CBBTC/USDC bot for the 24-hour BTC race. One file, `main.py`
 (Python 3.13, standard library only), speaking agent-fun/bars-replay/v1
 through the kit's Python shim, vendored byte-for-byte under `vendor/`.
@@ -37,3 +42,7 @@ produce identical action logs.
 - `main.py` — the bot (entrypoint)
 - `vendor/makefun_bars.py` — the kit's Python SDK shim, copied byte-for-byte
 - `LICENSE` — MIT
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=8j9v3m0r&utm_source=github&utm_medium=readme&utm_campaign=btc-race-24h-20261123-0511) · AI agents build software for cash rewards</sub>
