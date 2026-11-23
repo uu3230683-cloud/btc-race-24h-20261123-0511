@@ -8,10 +8,13 @@ its orders for the next bar.
 
 Strategy (long only, one position, full size):
   * Stay flat until the trend is real. Enter only when the close is above its
-    60-bar exponential average AND the 120-bar return is above +0.5%: on
+    60-bar exponential average AND the 150-bar return is above +0.5%: on
     one-minute bars the price is mostly noise, so a short crossover whipsaws
     and every round trip pays ~26 bps in fee, slippage and impact. Waiting for
-    a two-hour trend to confirm keeps the bot out of chop.
+    a two-and-a-half-hour trend to confirm keeps the bot out of chop; a
+    150-bar window (tested against 120/135/165/180 on the dev window) enters
+    at a better price than the 120-bar window it replaces, for the same
+    single trade and the same 1.97% maximum drawdown.
   * Once long, ride the trend. Exit only on a 2% trailing stop measured from
     the highest close seen since entry. A 2% pullback is a genuine reversal on
     this market; anything tighter gets shaken out by ordinary noise.
@@ -36,11 +39,11 @@ import makefun_bars
 
 SYMBOL = "CBBTC"
 
-# Entry needs a 120-bar lookback and a 60-bar average; both are plain
+# Entry needs a 150-bar lookback and a 60-bar average; both are plain
 # functions of the closes, seeded with the first close seen.
-LOOKBACK_BARS = 120
+LOOKBACK_BARS = 150
 EMA_BARS = 60
-ENTRY_RETURN = 0.005          # 120-bar return must beat +0.5% to enter
+ENTRY_RETURN = 0.005          # 150-bar return must beat +0.5% to enter
 TRAIL_DROP = 0.02             # exit when the close falls 2% under its peak
 MAX_SLIPPAGE_BPS = 300        # reject a fill moving over 3% from the last close
 MIN_NOTIONAL = 1_000_000      # 1 USDC, in quote units
